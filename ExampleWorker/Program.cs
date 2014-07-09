@@ -16,7 +16,7 @@ namespace ExampleWorker
                 var worker = new GearmanThreadedWorker();
                 var host = "tech001";
                 worker.AddServer(host, 4730);
-                //worker.AddServer(host, 4730);
+                //worker.AddServer(host, 4731);
                 worker.SetClientId("my-threaded-worker");
                 worker.RegisterFunction<string, string>("reverse", DoReverse, Serializers.UTF8StringDeserialize, Serializers.UTF8StringSerialize);
                 worker.RegisterFunction<string, string>("reverse_with_status", DoReverseWithStatus, Serializers.UTF8StringDeserialize, Serializers.UTF8StringSerialize);
